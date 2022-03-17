@@ -55,6 +55,7 @@ func main() {
 	var filename string
 	var bad_words []string
 
+	fmt.Println("Enter the name of file with forbidden words:")
 	fmt.Scan(&filename)
 	file, err := os.OpenFile(filename, os.O_RDONLY, 0644)
 	if err != nil {
