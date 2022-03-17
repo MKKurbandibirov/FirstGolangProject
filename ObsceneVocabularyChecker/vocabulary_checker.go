@@ -24,7 +24,8 @@ func checkAndPrint(bad_words []string) {
 	inscan := bufio.NewScanner(os.Stdin)
 	inscan.Split(bufio.ScanLines)
 
-	for inscan.Scan() {
+	fmt.Print("Enter your message here(if you want to exit enter \"exit\"):\n>")
+	for inscan.Scan(){
 		line = inscan.Text()
 		words = strings.Split(line, " ")
 		for i := 0; i < len(words); i++ {
@@ -48,6 +49,7 @@ func checkAndPrint(bad_words []string) {
 			fmt.Print(" ")
 		}
 		fmt.Println()
+		fmt.Print(">")
 	}
 }
 
